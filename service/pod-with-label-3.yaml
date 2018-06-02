@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-3
+  namespace: default
+  labels:
+    app: nginx
+spec:
+  containers:
+  - image: david1023/nginx:latest
+    imagePullPolicy: Always
+    name: nginx
+    ports:
+      - containerPort: 80
+        protocol: TCP
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
