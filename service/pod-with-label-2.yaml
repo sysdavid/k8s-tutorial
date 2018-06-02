@@ -20,3 +20,11 @@ spec:
     - name: password
       configMap:
         name: password
+
+---   
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: password
+data:
+  index.html: password

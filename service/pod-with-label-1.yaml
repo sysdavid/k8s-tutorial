@@ -21,3 +21,11 @@ spec:
   - name: account
     secret:
       secretName: account
+---    
+apiVersion: v1
+kind: Secret
+metadata:
+  name: account
+type: Opaque
+data:
+  index.html: YWNjb3VudA==
